@@ -23,16 +23,21 @@ It provides RESTful APIs to interact with a MongoDB database.
 ```sh
 git clone https://github.com/your-username/crud-app.git
 cd crud-app
+```
+
 ### 2️⃣ Install dependencies
+```sh
 npm install
+```
 ### 3️⃣ Set up environment variables
+```sh
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
+```
 ### 4️⃣ Start the server
+```sh
 npm start
-
----
-```md
+```
 ## 📡 API Endpoints
 
 | Method | Endpoint | Description |
@@ -51,9 +56,7 @@ Example: Create a new item using `cURL`:
 curl -X POST http://localhost:5000/api/items \
 -H "Content-Type: application/json" \
 -d '{"name": "Sample Item", "price": 10}'
-
----
-```md
+```
 ## 🛠️ Future Improvements
 - Implement authentication (JWT)
 - Add frontend UI (React)
