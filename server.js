@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const connectDB = require("../crud_backend/src/database/db");
+const connectDB = require("./src/database/db");
 const useRoutes = require("./src/route/routes");
 
 const app = express();
