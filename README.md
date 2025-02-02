@@ -17,22 +17,21 @@ It provides RESTful APIs to interact with a MongoDB database.
 - **Mongoose** (ODM for MongoDB)
 - **Postman** (For API Testing)
 ## 📂 Project Structure
-## 🔧 Installation & Setup
 
+## 🔧 Installation & Setup
 ### 1️⃣ Clone the repository
 ```sh
 git clone https://github.com/your-username/crud-app.git
 cd crud-app
+### 2️⃣ Install dependencies
 npm install
+### 3️⃣ Set up environment variables
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
+### 4️⃣ Start the server
 npm start
 
 ---
-
-## 7️⃣ **API Endpoints**
-Tables (`| Column | Column |`) are useful for structured data.
-
 ```md
 ## 📡 API Endpoints
 
@@ -43,8 +42,8 @@ Tables (`| Column | Column |`) are useful for structured data.
 | `GET` | `/api/items/:id` | Get an item by ID |
 | `PUT` | `/api/items/:id` | Update an item |
 | `DELETE` | `/api/items/:id` | Delete an item |
-## 📮 Testing the API
 
+## 📮 Testing the API
 Use **Postman** or **cURL** to test the endpoints.
 
 Example: Create a new item using `cURL`:
@@ -54,18 +53,15 @@ curl -X POST http://localhost:5000/api/items \
 -d '{"name": "Sample Item", "price": 10}'
 
 ---
-
-## 9️⃣ **Future Improvements**
-A simple bullet list of possible improvements.
-
 ```md
 ## 🛠️ Future Improvements
 - Implement authentication (JWT)
 - Add frontend UI (React)
 - Improve error handling
+
 ## 📌 Author
-- **Your Name**  
-- GitHub: [your-username](https://github.com/your-username)  
+- **Felix Idalia**  
+- GitHub: [your-username](https://github.com/FELIX-IDALIA)  
 - LinkedIn: [Your LinkedIn](https://linkedin.com/in/your-profile)  
 
 
