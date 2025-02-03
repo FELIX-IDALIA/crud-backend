@@ -1,5 +1,6 @@
 const User = require("../model/Users");
 
+// Finds all users
 const readAll = async (req, res) => {
    try {
         const users = await User.find();
@@ -14,4 +15,20 @@ const readAll = async (req, res) => {
    }
 };
 
-module.exports = readAll;
+// Finds users whose age is greater than 10
+const readUsersAboveTen = async (req, res) => {
+     try {
+          const users = await User.find({ age: { $gt: 10 }});
+          //console.log(users.length);
+
+          if (users.length === 0) {
+               return res.status(404).json({ error: "No records found" });
+          }
+
+          res.status(200).json({ message: "Success", users });
+     } catch (error) {
+          res.status(500).json({ error: error.message });
+     }
+};
+
+module.exports = { readAll, readUsersAboveTen };
