@@ -1,8 +1,7 @@
 const create = require("../crud/create");
 const { readAll, readUsersAboveTen, readByEmail, readOne } = require("../crud/read");
 const { updatePut, updatePatch } = require("../crud/update");
-const deleteOne = require("../crud/deleteOne");
-const deleteMany = require("../crud/deleteMany");
+const {deleteMany, deleteOne} = require("../crud/delete");
 const express = require("express");
 const router = express.Router();
 
