@@ -1,14 +1,14 @@
 const express = require("express");
 const cors = require("cors");
 const connectDB = require("./src/database/db");
-const useRoutes = require("./src/route/routes");
+const router = require("./src/route/routes");
 
 const app = express();
 
 // Middleware 
 app.use(express.json());
 app.use(cors());
-app.use("/api", useRoutes);
+app.use("/api", router);
 
 app.get("/", (req, res) => {
     res.send("Server is running...");
