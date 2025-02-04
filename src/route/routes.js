@@ -1,6 +1,5 @@
 const create = require("../crud/create");
-const {readOne, readByEmail } = require("../crud/readOne");
-const {readAll, readUsersAboveTen} = require("../crud/readAll");
+const {readAll, readUsersAboveTen, readByEmail, readOne } = require("../crud/read");
 const updatePatch = require("../crud/updatePatch");
 const updatePut = require("../crud/updatePut");
 const deleteOne = require("../crud/deleteOne");
