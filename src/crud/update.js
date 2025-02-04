@@ -46,8 +46,13 @@ const updatePut = async (req, res) => {
 // Find user by id and update (PATCH)
 const updatePatch = async (req, res) => {
     try {
-        checkUniqueFields();
+        // Call checkUniqueFields and wait for result
+        const uniqueCheckResult = await checkUniqueFields(req, req.params.id);
 
+        if (uniqueCheckResult) {
+            return res.status(400).json(uniqueCheckResult);
+        }
+        
         const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, { new: true });
 
         if (!updatedUser) {
