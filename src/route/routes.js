@@ -1,5 +1,5 @@
 const create = require("../crud/create");
-const readOne = require("../crud/readOne");
+const {readOne, readByEmail } = require("../crud/readOne");
 const {readAll, readUsersAboveTen} = require("../crud/readAll");
 const updatePatch = require("../crud/updatePatch");
 const updatePut = require("../crud/updatePut");
@@ -10,6 +10,7 @@ const router = express.Router();
 
 router.post("/create-user", create);
 router.get("/read-one/:id", readOne);
+router.get("/read-by-email/", readByEmail);
 router.get("/read-all", readAll);
 router.get("/read-users-above", readUsersAboveTen);
 router.patch("/update-by-patch/:id", updatePatch);
